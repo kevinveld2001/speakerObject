@@ -1,6 +1,7 @@
 require('dotenv').config()
 const mqtt = require("mqtt");
 const {handleTtsInput} = require("./tts");
+const {playFile} = require("./audio");
 
 const client = mqtt.connect("tls://mqtt.toto.io:8883", {
   // rejectUnauthorized: false,
@@ -22,9 +23,9 @@ client.on('message', (topic, message) => {
     if (type === "tts") {
         handleTtsInput(props);
     } else if (type === "file") {
-        //implement file playing
+        playFile(props);
     } else {
-        console.error("Unknown type");``
+        console.error("Unknown type");
     }
 });
 
