@@ -1,18 +1,18 @@
 # speakerObject
-SpeakerObject is a phisical device connected with toto.io. It will allow you to play audio files and convert text to speech. This can be controlled from the gamplay in toto.
+SpeakerObject is a physical device connected with toto.io. It will allow you to play audio files and convert text to speech. This can be controlled from the gameplay in toto.
 
 
 # Install
-You should have a raspbarypi and flash it with raspberry pi os. In the settings you should turn on ssh and set the host name to somting you can remember. If you want it to automaticly connect to the wifi you can also configure that with the raspberry pi imager.
+You should have a Raspberry Pi and flash it with Raspberry Pi OS. In the settings, you should turn on ssh and set the hostname to something you can remember. If you want it to automatically connect to the wifi you can also configure that with the Raspberry Pi imager.
 
 Make sure you are connected to the same network.
-If you dont have filezilla already installed make sure to install that first.
-Than connect to the pi with filezilla using the credentials you filled into the raspberry pi imager.
+If you don't have FileZilla already installed make sure to install that first.
+Then connect to the Pi with FileZilla using the credentials you filled into the Raspberry Pi imager.
 
-Make a object using `create.toto.io`
-In the files of this protject copy the .env.example to .env and fill out the cridentials for the toto object.
+Make an object using `create.toto.io`
+In the files of this project copy the .env.example to .env and fill out the cridentials for the toto object.
 
-When you are connected. make a folder on the pi called `speaker`. Then drop all the files from this protject in there.
+When you are connected. Make a folder on the Pi called `speaker`. Then drop all the files from this project in there.
 
 Open a terminal on your computer. Type this:
 `ssh {username}@{ip OR {hostname}.local}`
@@ -24,7 +24,7 @@ If you are connected type
 
 
 # Use with toto
-The trigger should be formated as json. To tell the pi if you want to use text to speech or a sound file you should add 
+The trigger should be formatted as JSON. To tell the pi if you want to use text to speech or a sound file you should add
 `"type": "tts"` or `"type": "file"` to the json object.
 ### tts
 The `text` property is mandetory.
@@ -46,8 +46,7 @@ example:
 }
 ```
 ### file
-Upload the shound file you want to play to the `files` folder.
-By using the "file" property you can tell the pi what file it should play.
+Upload the sound file you want to play to the files folder. By using the "file" property you can tell the pi what file it should play.
 
 ```
 {
