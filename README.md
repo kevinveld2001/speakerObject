@@ -23,6 +23,11 @@ If you are connected type
 `sudo ./install.sh` this will run the install script.
 
 
+### TODO
+
+The install script will start the code. However, when you turn it off and on again, it does not start the code automatically. Therefore, you should add the Node script to the startup or start it yourself after booting up.
+
+
 # Use with toto
 The trigger should be formatted as JSON. To tell the pi if you want to use text to speech or a sound file you should add
 `"type": "tts"` or `"type": "file"` to the json object.
